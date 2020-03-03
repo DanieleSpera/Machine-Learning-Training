@@ -12,7 +12,6 @@ class NewModel(nn.Module):
         self.drop = nn.Dropout2d(0.2)
 
     def forward(self, x):
-        print('--->')
         
         x = x.transpose(3,1)
         x = self.drop(self.pool(F.relu(self.batch(self.conv(x)))))

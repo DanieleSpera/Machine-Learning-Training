@@ -9,7 +9,7 @@ import numpy as np
 from torch import Tensor
 from source_pytorch.tool_functions import Tool_functions
 
-class NewDatset(nn.Module):
+class LinearDatset(nn.Module):
 
     def __init__(self, transform = None, dataframe = None, dataroot = ".",n_melspec = 40, sampling_rate = 44100, audio_duration= 4, number_samples= 345):
         #general Check
@@ -48,13 +48,18 @@ class NewDatset(nn.Module):
         labels = np.array(self.data_ref['label'])    #Select Column and convert pandas dataframe into array (and avoid index problem)
         selected_label = labels[idx]
         
-        #Get the Mel Features  #!!! Feature Extractor
+            #Get the Mel Features  #!!! Feature Extractor
         mel_features = Tool_functions().get_melspec(self.data_dir,selected_filename,self.n_melspec, self.sampling_rate, self.audio_duration, self.number_samples)
         
         data = np.expand_dims(mel_features, axis=-1)
+        
         #print('melspec shape',data.shape)
-        # Convert to Tensor
+            #Shape data for linear 1 dimension
+        data = data.reshape(-1, 1)
+        
+            # Convert to Tensor
         data = Tensor(data)
 
         label = self.classes[selected_label]
+
         return data, label

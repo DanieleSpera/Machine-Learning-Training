@@ -1,7 +1,7 @@
+import os
 import librosa
 import librosa.display
 import numpy as np
-import os
 
 
 class Tool_functions:
