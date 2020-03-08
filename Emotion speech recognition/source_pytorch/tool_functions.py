@@ -9,15 +9,15 @@ class Tool_functions:
     def __init__(self):
         pass
 
-    def get_melspec(self,data_path,file_name, n_melspec = 40, sampling_rate = 44100, audio_duration= 4, number_samples= 345):
+    def get_melspec(self, data_path, file_name, n_melspec=40, sampling_rate=44100, audio_duration=4, number_samples= 345):
 
         file_path = os.path.join(data_path, file_name)
 
         # Load Audio ----------------------------------------------------------------------------
         data, _ = librosa.load(file_path, sr=sampling_rate
-                            ,res_type= "kaiser_fast"
-                            ,duration= audio_duration
-                            ,offset=0.5
+                            , res_type="kaiser_fast"
+                            , duration=audio_duration
+                            , offset=0.5
                             )
 
         # Random offset / Padding ---------------------------------------------------------------
@@ -36,7 +36,7 @@ class Tool_functions:
 
         # Extract mel features ---------------------------------------------------------------
 
-        melspec = librosa.feature.melspectrogram(data, n_mels = n_melspec)  #Mel Spectrum
+        melspec = librosa.feature.melspectrogram(data, n_mels=n_melspec)  #Mel Spectrum
         mel_band = librosa.amplitude_to_db(melspec)                          #Amplify 
 
         #print(file_name + '-> processed')

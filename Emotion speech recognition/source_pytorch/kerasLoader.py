@@ -18,7 +18,7 @@ class KerasLoader(Dataset):
         for fname in tqdm(df.fname):
 
             #Get the Mel Features #!!! Feature Extractor
-            mel_features = Tool_functions().get_melspec(dataroot,fname)
+            mel_features = Tool_functions().get_melspec(dataroot,fname,n_melspec=n_mfcc)
 
             logspec = np.expand_dims(mel_features, axis=-1)
             X[cnt,] = logspec
