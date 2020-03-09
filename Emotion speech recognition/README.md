@@ -37,11 +37,4 @@ seaborn
 1.0
 
 - Utils
-Once downloaded to move in one single folder the audio files is possible to use this code
-
-def moveFilesInDir(rootDir,outDir):
-    for root, dirs, files in os.walk(rootDir):  # replace the . with your starting directory
-        for file in files:
-            path_file = os.path.join(root,file)
-            shutil.copy2(path_file,outDir) # change you destination dir
-            print(path_file)
+Once downloaded to move in one single folder the audio files is possible to use "moveFilesInDir" content in Notes/note.py
