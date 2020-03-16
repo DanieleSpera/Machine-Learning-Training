@@ -17,19 +17,19 @@ Metrics : To define the efficacy of the model, considering the features of the i
 
 Libraries : The library that the project uses are the following:
 
-torch
-import torch.nn as nn
-sklearn.model_selection
-sklearn.preprocessing
-scipy
-numpy
-pandas
-matplotlib.pyplot
-librosa
-torch.utils.data.dataset 
-tqdm import tqdm
-source_pytorch.tool_functions
-seaborn
+  - torch
+  - import torch.nn as nn
+  - sklearn.model_selection
+  - sklearn.preprocessing
+  - scipy
+  - numpy
+  - pandas
+  - matplotlib.pyplot
+  - librosa
+  - torch.utils.data.dataset 
+  - tqdm import tqdm
+  - source_pytorch.tool_functions
+  - seaborn
 
 - Versions
 1.0
