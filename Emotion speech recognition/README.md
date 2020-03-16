@@ -1,4 +1,4 @@
-Indicate 
+*Indicate* 
 
 The Goal : Goal of this project is to test 2 different emotional speech recognition models 
 
@@ -31,8 +31,6 @@ Libraries : The library that the project uses are the following:
   - source_pytorch.tool_functions
   - seaborn
 
-- Versions
-1.0
+Versions : 1.0
 
-- Utils
-Once downloaded to move in one single folder the audio files is possible to use "moveFilesInDir" content in Notes/note.py
+Utils : Once downloaded to move in one single folder the audio files is possible to use "moveFilesInDir" content in Notes/note.py
