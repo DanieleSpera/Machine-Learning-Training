@@ -43,3 +43,5 @@ The library that the project uses are the following:
 **Utils**
 
 Once downloaded to move in one single folder the audio files is possible to use "moveFilesInDir" content in Notes/note.py
+
+Short link to this project: shorturl.at/HKX29
